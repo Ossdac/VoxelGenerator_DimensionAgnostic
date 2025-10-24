@@ -35,7 +35,7 @@ public static class BlockHelper
             var neighbourBlockCoordinates = new Vector3Int(x, y, z) + direction.GetVector();
             var neighbourBlockType = Chunk.GetBlockFromChunkCoordinates(chunk, neighbourBlockCoordinates);
 
-            if (neighbourBlockType == BlockType.Air || neighbourBlockType == BlockType.Nothing && renderNothing &&
+            if (neighbourBlockType == BlockType.Air || neighbourBlockType == BlockType.Nothing && (renderNothing || direction.Equals(Direction.up)) &&
                 (renderDown || !direction.Equals(Direction.down)))
             {
 
