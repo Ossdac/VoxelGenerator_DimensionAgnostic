@@ -53,12 +53,12 @@ public class SaveToPrefab : MonoBehaviour
             prefabName + ".prefab"));
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-        Destroy(prefab);
-        for (int i = 0; i < chunks.Length; i++)
-        {
-            if (chunks[i] != null)
-                Destroy(chunks[i]);
-        }
+        // Destroy(prefab);
+        // for (int i = 0; i < chunks.Length; i++)
+        // {
+        //     if (chunks[i] != null)
+        //         Destroy(chunks[i]);
+        // }
     }
 
     private void CheckDirectorys()
